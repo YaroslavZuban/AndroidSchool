@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Eltex School</string>
     <string name="hello_eltex">Hello Eltex!</string>
-    <string name="avatar">avatar</string>
-    <string name="menu">menu</string>
-    <string name="https_m2_material_io_components_cards">https://m2.material.io/components/cards</string>
+    <string name="avatar" translatable="false">avatar</string>
+    <string name="menu" translatable="false">menu</string>
+    <string name="https_m2_material_io_components_cards" translatable="false">https://m2.material.io/components/cards</string>
+    <string name="not_implemented" translatable="false">Not implemented</string>
 </resources>
