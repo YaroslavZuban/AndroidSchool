@@ -10,15 +10,15 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="0dp"
+        android:paddingStart="@dimen/padding_start"
+        android:paddingTop="@dimen/padding_top"
+        android:paddingEnd="@dimen/padding_end"
         tools:context=".MainActivity">
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/width_image"
+            android:layout_height="@dimen/height_image"
             android:contentDescription="@string/avatar"
             app:layout_constraintBaseline_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +27,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FEF7FF"
-            android:textSize="16sp"
+            android:textColor="@color/cream_color"
+            android:textSize="@dimen/text_average_size"
             app:layout_constraintBottom_toBottomOf="@id/avatar"
             app:layout_constraintEnd_toEndOf="@id/avatar"
             app:layout_constraintStart_toStartOf="@id/avatar"
@@ -37,12 +37,12 @@
 
         <TextView
             android:id="@+id/author"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/common_spacing"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_average_size"
             app:layout_constraintBottom_toTopOf="@id/authorOffset"
             app:layout_constraintEnd_toStartOf="@id/menu"
             app:layout_constraintStart_toEndOf="@id/avatar"
@@ -52,17 +52,17 @@
         <Space
             android:id="@+id/authorOffset"
             android:layout_width="wrap_content"
-            android:layout_height="4dp"
+            android:layout_height="@dimen/space_height"
             app:layout_constraintBottom_toTopOf="@id/published"
             app:layout_constraintStart_toEndOf="@id/avatar"
             app:layout_constraintTop_toBottomOf="@id/author" />
 
         <TextView
             android:id="@+id/published"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/common_spacing"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_small_size"
             app:layout_constraintBottom_toBottomOf="@id/avatar"
             app:layout_constraintEnd_toStartOf="@id/menu"
             app:layout_constraintStart_toEndOf="@id/avatar"
@@ -71,11 +71,11 @@
 
         <ImageView
             android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="4dp"
+            android:layout_width="@dimen/width_image"
+            android:layout_height="@dimen/height_image"
+            android:layout_marginEnd="@dimen/image_marginEnd"
             android:contentDescription="@string/menu"
-            android:padding="8dp"
+            android:padding="@dimen/image_padding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/baseline_more_vert_24" />
@@ -85,17 +85,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
-            app:barrierMargin="12dp"
+            app:barrierMargin="@dimen/barrier_margin"
             app:constraint_referenced_ids="author,published,menu" />
 
         <TextView
             android:id="@+id/status"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_spacing"
             android:layout_marginEnd="@dimen/common_spacing"
             android:maxLines="1"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_average_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/headerBarrier"
@@ -103,12 +103,12 @@
 
         <TextView
             android:id="@+id/last_visit"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
 
             android:layout_marginEnd="@dimen/common_spacing"
             android:maxLines="1"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_small_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/status"
@@ -126,7 +126,7 @@
 
         <TextView
             android:id="@+id/content"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_spacing"
             android:layout_marginEnd="@dimen/common_spacing"
@@ -147,13 +147,13 @@
 
         <TextView
             android:id="@+id/link"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/text_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_spacing"
             android:layout_marginEnd="@dimen/common_spacing"
             android:autoLink="web"
             android:text="@string/https_m2_material_io_components_cards"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_small_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/contentSpace" />
@@ -193,7 +193,7 @@
             style="@style/Widget.Material3.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_small_size"
             app:icon="@drawable/baseline_people_outline_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linkSpace"
