@@ -5,7 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 
 interface PostRepository {
-    fun getPost(): Flow<Post>
-    fun like()
-    fun interest()
+    fun getPost(): Flow<List<Post>>
+    fun likeById(id: Long)
+    fun interestById(id: Long)
+
 }

@@ -17,18 +17,18 @@ class PostViewModel(private val repository: PostRepository) : ViewModel() {
 
     init {
         repository.getPost()
-            .onEach { post ->
+            .onEach { posts ->
                 _state.update {
-                    it.copy(post = post)
+                    it.copy(posts = posts)
                 }
             }.launchIn(viewModelScope)
     }
 
-    fun like() {
-        repository.like()
+    fun likeById(id: Long) {
+        repository.likeById(id)
     }
 
-    fun interest() {
-        repository.interest()
+    fun interestById(id: Long) {
+        repository.interestById(id)
     }
 }
